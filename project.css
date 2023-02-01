@@ -24,18 +24,6 @@ ul {
 
 
 /* SIDEBAR */
-.icon {
-  height: 1.5rem;
-  vertical-align: -1.3em;  /* elements(icon-name) inlined with the icon are vertically centered */
-  padding-bottom: 1rem;
-  margin-right: 15px;
-}
-
-.icon-name {
-  font-size: larger;
-  font-weight: bold;
-}
-
 .sidebar {
   background-color: rgb(33, 161, 236);
   grid-row: 1 / 3;  /* sets the sidebar while also setting header and menu */
@@ -44,18 +32,34 @@ ul {
 
   display: grid;
   gap: 30px;
-  grid-template-rows: repeat(3, max-content) auto;
+  grid-template-rows: repeat(3, max-content);   /* set brand, menu and settings grid */
 }
 
-#sidebar-logo {
+li, .sidebar-brand {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);  /* set two grids(for icon & icon-item) to sidebar header and to each navigation items */
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+#logo {
   height: 2.5rem;
-  vertical-align: -.65em;
   margin-right: 15px;
 }
 
-#sidebar-brand {
+#brand {
   font-size: x-large;
-  font-weight: bold;
+  padding-top: 8px;
+}
+
+.icon {
+  height: 1.5rem;
+  margin-right: 15px;
+}
+
+.icon-name {
+  font-size: larger;
+  padding-top: 3px;
 }
 
 
